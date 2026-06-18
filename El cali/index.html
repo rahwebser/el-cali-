@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Cali Mexican Food</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">EL CALI</div>
+
+        <button class="menu-toggle" aria-label="Open navigation menu">☰</button>
+
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Authentic Mexican Food</h1>
+
+        <p>
+            Fresh ingredients. Traditional recipes.
+            Made daily in Kansas City.
+        </p>
+
+        <a href="#menu" class="btn">View Menu</a>
+
+        <a href="tel:+18162986023" class="btn">
+            📞 (816) 298-6023
+        </a>
+
+    </div>
+
+</section>
+
+<section id="about">
+
+    <h2 class="section-title">About El Cali</h2>
+
+    <div class="about">
+
+        <p>
+            El Cali Mexican Food serves authentic Mexican dishes
+            made with fresh ingredients and bold flavors. From
+            tacos and birria to guacamole and traditional favorites,
+            every meal is prepared with care and served fresh.
+        </p>
+
+    </div>
+
+</section>
+
+<div class="menu-gallery">
+    <img src="menu1.jpg" alt="Menu Page 1" onclick="openLightbox(this.src)">
+    <img src="menu2.jpg" alt="Menu Page 2" onclick="openLightbox(this.src)">
+    <img src="menu3.jpg" alt="Menu Page 3" onclick="openLightbox(this.src)">
+</div>
+
+<script>
+function openLightbox(src) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = src;
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
+</body>
+
+<div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+</div> 
+</section>
+    <h2 class="section-title">Featured Menu Items</h2>
+
+    <div class="menu-container">
+
+        <div class="menu-item">
+            <span>Carne Asada, Pollo & Cebolla</span>
+            <span class="price">$11.50</span>
+        </div>
+
+        <div class="menu-item">
+            <span>Chips & Guacamole</span>
+            <span class="price">$7.50</span>
+        </div>
+
+        <div class="menu-item">
+            <span>2 Calitacos + Consome</span>
+            <span class="price">$10.99</span>
+        </div>
+
+        <div class="menu-item">
+            <span>Birria</span>
+            <span class="price">$12.75</span>
+        </div>
+
+        <div class="menu-item">
+            <span>Mole Rojo Con Pollo</span>
+            <span class="price">$14.99</span>
+        </div>
+
+        <div class="menu-item">
+            <span>Plato de Cecina</span>
+            <span class="price">$16.25</span>
+        </div>
+
+        <div class="menu-item">
+            <span>4 Tacos</span>
+            <span class="price">$10.50</span>
+        </div>
+        <div class="menu-item">
+            <span style="display:block; text-align:center;">
+                 &emsp;&emsp;&emsp; &emsp;&emsp;&emsp; &emsp;&emsp;&emsp; &emsp;&emsp;&emsp; &emsp;&emsp;&emsp; &emsp;&emsp;📞Call Now to See Our Full Menu!</a>   
+                
+            </span>
+        </div>
+    </div>
+
+</section>
+
+
+<section id="location">
+    <h2>📍 Find Us</h2>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3102.830875932235!2d-94.4953869!3d38.950691899999995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0e7ea743985fb%3A0x950c4ac95e534b93!2sEl%20Cali%20Mexican%20Food!5e0!3m2!1sen!2sus!4v1781764315568!5m2!1sen!2sus"
+        width="100%"
+        height="450"
+        style="border:0; border-radius:12px;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</section>
+
+
+
+<section id="contact">
+
+    <h2 class="section-title">Contact Us</h2>
+
+    <div class="contact">
+        <div class="address">
+            📍 9530 James A Reed Rd, Kansas City, MO 64134
+        </div>
+
+        <div class="phone">
+             <a href="tel:+18162986023">📞 (816) 298-6023</a>
+        </div>
+
+        <p>
+            Call ahead for takeout orders or questions about our menu.
+        </p>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <h3>EL CALI MEXICAN FOOD</h3>
+
+    <p>
+        Authentic Mexican Cuisine • Kansas City, Missouri
+    </p>
+
+</footer>
+
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+        });
+    });
+</script>
+
+</body>
+</html>
